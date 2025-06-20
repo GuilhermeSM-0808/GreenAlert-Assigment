@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Alert</title>
+
+    <link rel="stylesheet" href="./src/css/style.css">
+
+</head>
+
+<body>
+    <header>
+        <div>
+            <h1>
+                Green Alert
+                <img src="./src/imgs/recycle-icon.png" alt="Book logo icon">
+            </h1>            
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="">Menu</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <section id="presentation" class="presentation">
+        <div id="img1">
+            <img src="./src/imgs/05.05.2024_-_Sobrevoo_das_áreas_afetadas_pelas_chuvas_em_Canoas_-_53700500641.jpg" alt="">
+        </div>
+        <div id="img2">
+            <img src="./src/imgs/estrategias-de-prevencao-e-mitigacao-praticas-sustentaveis-contra-enchentes.jpeg" alt="">
+        </div>
+        <div id="img3">
+            <img src="./src/imgs/AdobeStock_237199352-min-scaled.jpeg" alt="">
+        </div>
+        <div id="img4">
+            <img src="./src/imgs/Abre-PERFIL-BRASIL-40-3.jpg" alt="">
+        </div>
+    </section>
+
+    <section id="formSection" class="formSection">
+
+        <form action="form">
+            <h2>Fale conosco:</h2>
+
+            <label for="nome">Nome: </label>
+            <input type="text" id="nome" placeholder="Guilherme Satler Macedo">
+            <label for="email">E-mail: </label>
+            <input type="email" id="email" placeholder="example@email.com">
+
+            <label for="tipo">Tipo:</label>
+            <select id="tipo">
+                <option value="option1">Sugestão</option>
+                <option value="optino2">Denúncia</option>
+            </select>
+
+            <label for="mensagem">Descrição: </label>
+            <textarea id="mensagem" placeholder="Insira sua descrição aqui"></textarea>
+            <button id="btnEnviarForm">Enviar</button>
+            <p id="msgErro"></p>
+
+        </form>
+    </section>
+
+    <section id="quiz" class="quiz">
+
+            <h1 class="quiztitle">Quiz Interativo – Você conhece seu impacto ambiental?</h1>
+
+        <form id="quizForm">
+
+            <fieldset id="q1">
+                <legend>1. O que significa a sigla ESG?</legend>
+                <label><input type="radio" name="q1" value="A"> A) Environmental, Social and Governance</label>
+                <label><input type="radio" name="q1" value="B"> B) Environmental, Social and Growth</label>
+                <label><input type="radio" name="q1" value="C"> C) Energy, Sustainability and Green</label>
+            </fieldset>
+
+            <fieldset id="q2">
+                <legend>2. Uma prática que contribui diretamente para o consumo consciente é:</legend>
+                <label><input type="radio" name="q2" value="A"> A) Comprar produtos em embalagens plásticas descartáveis</label>
+                <label><input type="radio" name="q2" value="B"> B) Escolher produtos duráveis e de empresas sustentáveis</label>
+                <label><input type="radio" name="q2" value="C"> C) Comprar o máximo possível para aproveitar promoções</label>
+            </fieldset>
+
+            <fieldset id="q3">
+                <legend>3. Uma medida eficiente para prevenir enchentes nas cidades é:</legend>
+                <label><input type="radio" name="q3" value="A"> A) Ampliar áreas verdes e investir em sistemas de drenagem sustentável</label>
+                <label><input type="radio" name="q3" value="B"> B) Construir mais estacionamentos de asfalto</label>
+                <label><input type="radio" name="q3" value="C"> C) Limpar os rios apenas uma vez por ano</label>
+            </fieldset>
+
+            <fieldset id="q4">
+                <legend>4. Qual desses materiais leva mais tempo para se decompor na natureza?</legend>
+                <label><input type="radio" name="q4" value="A"> A) Plástico</label>
+                <label><input type="radio" name="q4" value="B"> B) Papel</label>
+                <label><input type="radio" name="q4" value="C"> C) Casca de fruta</label>
+            </fieldset>
+
+            <fieldset id="q5">
+                <legend>5. Sobre o conceito de pegada de carbono, podemos afirmar que:</legend>
+                <label><input type="radio" name="q5" value="A"> A) É a quantidade de gases de efeito estufa emitidos direta ou indiretamente por uma pessoa, empresa ou evento.</label>
+                <label><input type="radio" name="q5" value="B"> B) É a quantidade de lixo que uma pessoa produz diariamente.</label>
+                <label><input type="radio" name="q5" value="C"> C) É a marca dos pneus no asfalto.</label>
+            </fieldset>
+
+            <fieldset id="q6">
+                <legend>6. Qual dessas atitudes é mais sustentável no dia a dia?</legend>
+                <label><input type="radio" name="q6" value="A"> A) Reduzir o consumo, reutilizar produtos e reciclar corretamente.</label>
+                <label><input type="radio" name="q6" value="B"> B) Jogar lixo reciclável no lixo comum, pois vai ser separado depois.</label>
+                <label><input type="radio" name="q6" value="C"> C) Usar copos descartáveis todos os dias no trabalho.</label>
+            </fieldset>
+
+            <fieldset id="q7">
+                <legend>7. Qual dessas ações está ligada à Governança dentro do ESG?</legend>
+                <label><input type="radio" name="q7" value="A"> A) Plantar árvores na empresa.</label>
+                <label><input type="radio" name="q7" value="B"> B) Transparência nos relatórios financeiros e combate à corrupção.</label>
+                <label><input type="radio" name="q7" value="C"> C) Instalar painéis solares.</label>
+            </fieldset>
+
+            <fieldset id="q8">
+                <legend>8. Sobre enchentes, qual alternativa é verdadeira?</legend>
+                <label><input type="radio" name="q8" value="A"> A) Descarte incorreto de lixo entope bueiros e agrava as enchentes.</label>
+                <label><input type="radio" name="q8" value="B"> B) As enchentes acontecem só por causa da chuva forte, sem relação com ações humanas.</label>
+                <label><input type="radio" name="q8" value="C"> C) Enchentes são boas, pois limpam as ruas da cidade.</label>
+            </fieldset>
+
+            <fieldset id="q9">
+                <legend>9. Qual dessas práticas é exemplo de economia circular?</legend>
+                <label><input type="radio" name="q9" value="A"> A) Transformar resíduos em novos produtos, como plástico reciclado virar móveis.</label>
+                <label><input type="radio" name="q9" value="B"> B) Jogar fora produtos antigos para comprar novos mais modernos.</label>
+                <label><input type="radio" name="q9" value="C"> C) Comprar e descartar, acreditando que a reciclagem sempre resolverá.</label>
+            </fieldset>
+
+            <fieldset id="q10">
+                <legend>10. Uma empresa sustentável deve:</legend>
+                <label><input type="radio" name="q10" value="A"> A) Focar só no lucro, sem se preocupar com impactos.</label>
+                <label><input type="radio" name="q10" value="B"> B) Buscar equilíbrio entre resultados econômicos, sociais e ambientais.</label>
+                <label><input type="radio" name="q10" value="C"> C) Investir apenas em marketing verde, sem mudar seus processos.</label>
+            </fieldset>
+
+            <button id="btnEnviarQuiz">Enviar Respostas</button>
+
+            <!-- <button type="reset" class="btnReset" id="btnReset">Apagar</button> -->
+
+        </form>
+
+        <hr>
+
+        <div>
+            <h2>Pontuação:</h2>
+            <h1 class="notaDisplay" id="nota">/10</h1>
+            <h2></h2>
+        </div>
+
+    </section>
+
+    <footer>
+        <ul>
+            <li><a href="mailto:gui.anim.dev@gmail.com">Suporte</a></li>
+            <li><a href="https://www.instagram.com/gsm.art/" target="_blank">Instagram</a></li>
+            <li><a href="">Sobre</a></li>
+        </ul>
+    </footer>
+</body>
+
+<script src="./src/js/app.js"></script>
+
+</html>
