@@ -1,3 +1,7 @@
+// Variaveis  Menu Hamburger
+
+
+
 // Variaveis FORM
     const form = document.getElementById("form")
     const inputNome = document.getElementById("nome")
@@ -19,46 +23,59 @@ const notaDisplay = document.getElementById9=("nota")
 
 // CODIGO
 
-    btnEnviarForm.addEventListener("click", function (event) {
+    // Menu Hamburger 
 
-        event.preventDefault()
-        let nome = inputNome.value
-        let email = inputEmail.value
-        let assunto = inputAssunto.value
-        let mensagem = inputMensagem.value
-
-        if (nome === '' || email === '' || mensagem === '') {
-            msgErro.textContent = "Preencha os campos vazios!"
-            msgErro.classList.add('msgVermelha') //<-- adicionar style definido no arquivo CSS ao texto
-            // msgErro.setAttribute("src","'link da imagem'") // <-- Alterar 'src' do elemento
-            // msgErro.src = "link"
-            if (nome === ''){
-                inputNome.style.backgroundColor(#f22727)
-            }
-            return
+    function toggleMenu() {
+        const sidebar = document.getElementById("menu");
+        if (sidebar.style.width === "250px") {
+            sidebar.style.width = "0";
+            sidebar.style.borderLeft = "none";
+        } else {
+            sidebar.style.width = "250px";
+            sidebar.style.borderLeft = "#DBF227 solid 2px";
         }
+    }
 
-        alert(`Nome: ${nome}\nE-mail: ${email}\nAssunto: ${assunto}\nMensagem: ${mensagem}`)
+    // btnEnviarForm.addEventListener("click", function (event) {
+
+    //     event.preventDefault()
+    //     let nome = inputNome.value
+    //     let email = inputEmail.value
+    //     let assunto = inputAssunto.value
+    //     let mensagem = inputMensagem.value
+
+    //     if (nome === '' || email === '' || mensagem === '') {
+    //         msgErro.textContent = "Preencha os campos vazios!"
+    //         msgErro.classList.add('msgVermelha') //<-- adicionar style definido no arquivo CSS ao texto
+    //         // msgErro.setAttribute("src","'link da imagem'") // <-- Alterar 'src' do elemento
+    //         // msgErro.src = "link"
+    //         if (nome === ''){
+    //             inputNome.style.backgroundColor()
+    //         }
+    //         return
+    //     }
+
+    //     alert(`Nome: ${nome}\nE-mail: ${email}\nAssunto: ${assunto}\nMensagem: ${mensagem}`)
 
 
 
-    })
+    // })
 
-    btnEnviarQuiz.addEventListener("click", function (quiz) {
+    // btnEnviarQuiz.addEventListener("click", function (quiz) {
 
-        let nota = 0;
+    //     let nota = 0;
 
-        quiz.preventDefault()
-        for (let p in gabarito){
-            let resposta = document.querySelector(`input[name="${p}"]:checked`);
-            if  (resposta === gabarito[p]){
-                nota++;
-            }
-        }
+    //     quiz.preventDefault()
+    //     for (let p in gabarito){
+    //         let resposta = document.querySelector(`input[name="${p}"]:checked`);
+    //         if  (resposta === gabarito[p]){
+    //             nota++;
+    //         }
+    //     }
 
-        notaDisplay.textContent =`${nota}/10`
+    //     notaDisplay.textContent =`${nota}/10`
         
 
 
 
-    })
+    // })

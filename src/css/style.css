@@ -40,6 +40,7 @@
 
 /* GLOBAL----------------------------------- GLOBAL ------------------------------------------ GLOBAL */
 
+
 html{
     scroll-behavior: smooth;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -110,6 +111,44 @@ header nav ul li a:hover{
     text-decoration: none;
     transition: all 0.5s;
     color: #DBF227;
+}
+
+/* Menu Hambuger ------------------------------------- Menu ---------------------- Menu  */
+
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    transform-origin: right;
+    background-color: #042940;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.3s;
+    z-index: 1;
+    border-left: none;
+}
+
+.sidebar a {
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #D6D58E;
+    display: block;
+    transition: 0.2s;
+}
+
+.sidebar a h1{
+    right: 15px;
+    padding: 10px;
+    text-decoration: none;
+    color: #D6D58E;
+    display: block;
+    transition: 0.2s;
+}
+
+.sidebar a:hover {
+    background-color: #065c91;
 }
 
 /* IMAGE - Presentation ----------------------------- IMG ------------------------------------------- IMAGE */
