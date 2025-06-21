@@ -1,10 +1,40 @@
-/* Color Theme Swatches in Hex -------------------------------------------------------------------------- COLOR */
--1-hex { color: #042940; }
--2-hex { color: #005C53; }
--3-hex { color: #9FC131; }
--4-hex { color: #DBF227; }
--5-hex { color: #D6D58E; }
-
+/* Color Theme Swatches  -------------------------------------------------------------------------- COLOR */
+:root{
+    --base1-color: #042940;
+    --base2-color: #005C53; 
+    --light-color: #065c91;
+    --dark-color: #04423c;
+    --accent1-color: #9FC131; 
+    --accent2-color: #DBF227; 
+    --text1-color: #D6D58E; 
+}
+body.padrao{
+    --base1-color: #042940;
+    --base2-color: #005C53; 
+    --light-color: #065c91;
+    --dark-color: #04423c;
+    --accent1-color: #9FC131; 
+    --accent2-color: #DBF227; 
+    --text1-color: #D6D58E; 
+}
+body.dark{
+    --base1-color: black;
+    --base2-color: rgb(43, 43, 43);
+    --light-color: darkgrey;
+    --dark-color: rgb(29, 29, 29);
+    --accent1-color: grey;
+    --accent2-color: rgb(99, 99, 99);
+    --text1-color: white;
+}
+body.inverso{
+    --base1-color: #fbd6bf;
+    --base2-color: #ffa3ac;
+    --light-color: #f9a36e;
+    --dark-color: #fbbdc3;
+    --accent1-color: #603ece;
+    --accent2-color: #240dd7;
+    --text1-color: #293892;
+}
 /* ANIMATIONS ------------------------------------------ ANIMATIONS -------------------------------------ANIMATIONS */
 
 @keyframes logo{
@@ -17,26 +47,7 @@
     }
 }
 
-@keyframes fadeIn {
-    80%{
-        opacity: 60%;
-    }
-    100%{
-        transform: translateY(0px);
-        opacity: 100%;
-    }
-}
 
-@keyframes BG-img-animation {
-    0%{
-        opacity: 1;
-        transform: matrix(1, 0, 0, 1, 0, -100); 
-    }
-    80%,100%{
-        opacity: 0;
-        transform: matrix(3, 0, 0, 3, 0, -300);
-    }
-}
 
 /* GLOBAL----------------------------------- GLOBAL ------------------------------------------ GLOBAL */
 
@@ -50,7 +61,7 @@ body{
     margin: 0;
     padding: 0;
     top: 0;
-    background-color: #042940;
+    background-color: var(--base1-color);
 }
 
 /* HEADER  ---------------------------------------- HEADER--------------------------------------------- HEADER*/
@@ -61,7 +72,7 @@ header{
     width: 100%;
     padding: 0px;
 
-    background-color: #9FC131;
+    background-color: var(--accent1-color);
     justify-content: space-between;
     align-items: center;
     position: fixed;
@@ -77,7 +88,7 @@ header div{
 
 header div h1{
     font-size: 48px;
-    color: #005C53;
+    color: var(--base2-color);
 }
 header div h1 img {
     position: absolute;
@@ -104,13 +115,13 @@ header nav ul li{
 
 header nav ul li a{
     text-decoration: none;
-    color: #005C53;
+    color: var(--base2-color);
     font-size: 24px;
 }
 header nav ul li a:hover{
     text-decoration: none;
     transition: all 0.5s;
-    color: #DBF227;
+    color: var(--accent2-color);
 }
 
 /* Menu Hambuger ------------------------------------- Menu ---------------------- Menu  */
@@ -122,34 +133,37 @@ header nav ul li a:hover{
     top: 0;
     right: 0;
     transform-origin: right;
-    background-color: #042940;
+    background-color: var(--base1-color);
     overflow-x: hidden;
     padding-top: 60px;
     transition: 0.3s;
     z-index: 1;
-    border-left: none;
+    border-left-style: none;
+    border-color: var(--accent2-color);
+    border-width: 2px;
 }
 
 .sidebar a {
     padding: 10px 20px;
     text-decoration: none;
-    color: #D6D58E;
+    color: var(--text1-color);
     display: block;
     transition: 0.2s;
+}
+
+.sidebar a:hover {
+    background-color: var(--light-color);
 }
 
 .sidebar a h1{
     right: 15px;
     padding: 10px;
     text-decoration: none;
-    color: #D6D58E;
+    color: var(--text1-color);
     display: block;
     transition: 0.2s;
 }
 
-.sidebar a:hover {
-    background-color: #065c91;
-}
 
 /* IMAGE - Presentation ----------------------------- IMG ------------------------------------------- IMAGE */
 
@@ -167,9 +181,9 @@ header nav ul li a:hover{
 
 .formSection form{
     margin: auto;
-    background-color: #005C53;
-    color: #D6D58E;
-    border: #04423c 5px solid;
+    background-color: var(--base2-color);
+    color: var(--text1-color);
+    border: var(--dark-color) 5px solid;
     border-radius: 36px;
     padding: 50px;
     display: flex;
@@ -177,8 +191,8 @@ header nav ul li a:hover{
     width: 50%;
 }
 .formSection form input{
-    background-color: #D6D58E;
-    color: #042940;
+    background-color: var(--text1-color);
+    color: var(--base1-color);
     padding: 5px 0px 5px 0px;
     width: 50%;
 }
@@ -188,20 +202,20 @@ header nav ul li a:hover{
 .formSection form select{
     width: fit-content;
     padding: 5px 0px 5px 0px;
-    background-color: #D6D58E;
-    color: #042940;
+    background-color: var(--text1-color);
+    color: var(--base1-color);
 }
 .formSection form textarea{
     width: 100%;
     padding: 8px 5px 15px 5px;
     margin: 5px 0px 15px 0px;
-    background-color: #D6D58E;
-    color: #042940;
+    background-color: var(--text1-color);
+    color: var(--base1-color);
 }
 .formSection form button{
     width: 10%;
-    color: #D6D58E;
-    background-color: #042940;
+    color: var(--text1-color);
+    background-color: var(--base1-color);
     padding: 8px 0px 5px 0px;
 }
 
@@ -217,12 +231,12 @@ header nav ul li a:hover{
 .quiz{
     width: 80%;
     padding: 20px 10% 60px 10%;
-    background-color: #005C53;
+    background-color: var(--base2-color);
 }
 
 .quiztitle{
-    background-color: #D6D58E;
-    color: #042940;
+    background-color: var(--text1-color);
+    color: var(--base1-color);
     padding: 10px;
     border-radius: 5px;
 
@@ -237,29 +251,29 @@ header nav ul li a:hover{
     padding: 20px 20px;
     border: none;
     border-radius: 5px;
-    background-color: #065c91;
+    background-color: var(--light-color);
 
 }
 
 .quiz form fieldset legend{
     padding: 5px 5px;
-    background-color: #D6D58E;
-    color: #042940;
+    background-color: var(--text1-color);
+    color: var(--base1-color);
     border-radius: 5px;
 }
 .quiz form fieldset label{
     width: 75%;
     padding: 5px;
     margin: 2px;
-    background-color: #042940;
-    color: #D6D58E;
+    background-color: var(--base1-color);
+    color: var(--text1-color);
     border-radius: 5px;
 }
 
 .quiz form button{
     padding: 20px;
-    background-color: #065c91;
-    color: #D6D58E;
+    background-color: var(--light-color);
+    color: var(--text1-color);
     display: inline;
 }
 
@@ -269,7 +283,7 @@ header nav ul li a:hover{
 
 .quiz form button:active{
     padding: 20px;
-    background-color: #042940;
+    background-color: var(--base1-color);
     color: white;
 }
 
@@ -278,8 +292,8 @@ header nav ul li a:hover{
     padding: 10px 10px;
     width: 33%;
     text-align: center;
-    background-color: #065c91;
-    color: #D6D58E;
+    background-color: var(--light-color);
+    color: var(--text1-color);
     border-radius: 128px;
 }
 
@@ -288,7 +302,7 @@ header nav ul li a:hover{
 /* FOOTER ----------------------------------------- FOOTER ------------------------------------------- FOOTER*/
 
 footer {
-    background-color: #D6D58E;
+    background-color: var(--text1-color);
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -306,10 +320,10 @@ footer ul li {
 footer ul li a{
     font-size: 24px;
     text-decoration: none;
-    color: #042940;
+    color: var(--base1-color);
 }
 
 footer ul li a:hover{
     transition: all 0.8s;
-    color: #DBF227;
+    color: var(--accent2-color);
 }

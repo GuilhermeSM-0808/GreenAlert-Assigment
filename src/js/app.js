@@ -29,11 +29,26 @@ const notaDisplay = document.getElementById9=("nota")
         const sidebar = document.getElementById("menu");
         if (sidebar.style.width === "250px") {
             sidebar.style.width = "0";
-            sidebar.style.borderLeft = "none";
+            sidebar.style.borderLeftStyle = "none";
         } else {
             sidebar.style.width = "250px";
-            sidebar.style.borderLeft = "#DBF227 solid 2px";
+            sidebar.style.borderLeftStyle = "solid";
         }
+    }
+
+    // Mudar Tema
+
+    function togglePadrao(){
+        document.body.classList.remove('dark','inverso')
+        document.body.classList.add('padrao')
+    }
+    function toggleInverso(){
+        document.body.classList.remove('padrao','dark')
+        document.body.classList.add('inverso')
+    }
+    function toggleDark(){
+        document.body.classList.remove('padrao','inverso')
+        document.body.classList.add('dark')
     }
 
     // btnEnviarForm.addEventListener("click", function (event) {
