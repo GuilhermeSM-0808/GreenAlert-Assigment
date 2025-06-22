@@ -11,8 +11,19 @@
     const btnEnviarForm = document.getElementById("btnEnviarForm")
     const msgErro = document.getElementById("msgErro")
     const cadastro = document.getElementById("cadastros")
+// Variaveis Slides
+    let slideIndex = 0;
+    const slides = document.getElementsByClassName("slide");
 
-// Constantes & Variaveis QUIZ 
+// // Variaveis FORM
+//     const form = document.getElementById("form")
+//     const inputNome = document.getElementById("nome")
+//     const inputEmail = document.getElementById("email")
+//     const inputAssunto = document.getElementById("tipo")
+//     const inputMensagem = document.getElementById("mensagem")
+//     const btnEnviarForm = document.getElementById("btnEnviarForm")
+//     const msgErro = document.getElementById("msgErro")
+//     const cadastro = document.getElementById("cadastros")
 
 const gabarito = {q1:"A", q2:"B", q3:"A", q4:"A", q5:"A", q6:"A", q7:"B", q8:"A", q9:"A", q10:"B"};
 const quiz = document.getElementById("quizForm")
@@ -24,14 +35,10 @@ const textoResultado = document.getElementById("textoResultado")
 
 
 // CODIGO
+    
+
 
     btnEnviarForm.addEventListener("click", function (event) {
-
-        event.preventDefault()
-        let nome = inputNome.value
-        let email = inputEmail.value
-        let assunto = inputAssunto.value
-        let mensagem = inputMensagem.value
 
         if (nome === '' || email === '' || mensagem === '') {
             msgErro.textContent = "Preencha os campos vazios!"
@@ -69,7 +76,7 @@ const textoResultado = document.getElementById("textoResultado")
 
 
 
-    })
+    });
 
     btnEnviarQuiz.addEventListener("click", function (quiz) {
 
@@ -134,3 +141,18 @@ const textoResultado = document.getElementById("textoResultado")
     
         }
     );
+
+    //Slides
+
+    function showSlides() {
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}
+      slides[slideIndex-1].style.display = "block";
+      setTimeout(showSlides, 6000);
+    }
+
+    showSlides();
+
