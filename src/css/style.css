@@ -223,6 +223,12 @@ header nav ul li a:hover{
     color: #D6D58E;
     display: inline;
 }
+.quiz form button:disabled{
+    padding: 20px;
+    background-color: darkgrey;
+    color: white;
+    display: inline;
+}
 
 .quiz form button.btnReset{
     background-color: rgb(168, 10, 10);
@@ -234,8 +240,13 @@ header nav ul li a:hover{
     color: white;
 }
 
+.textoResultado{
+    font-size: 32px;
+    text-align: center;
+}
+
 .quiz div{
-    margin: 50px auto 20px;
+    margin: 30px auto 20px;
     padding: 10px 10px;
     width: 33%;
     text-align: center;

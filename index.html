@@ -68,77 +68,77 @@
     <section id="quiz" class="quiz">
 
             <h1 class="quiztitle">Quiz Interativo – Você conhece seu impacto ambiental?</h1>
-
+            <p id="msgErroQuiz"></p>
         <form id="quizForm">
 
             <fieldset id="q1">
                 <legend>1. O que significa a sigla ESG?</legend>
-                <label><input type="radio" name="q1" value="A"> A) Environmental, Social and Governance</label>
-                <label><input type="radio" name="q1" value="B"> B) Environmental, Social and Growth</label>
-                <label><input type="radio" name="q1" value="C"> C) Energy, Sustainability and Green</label>
+                <label id="q1A"><input type="radio" name="q1" value="A"> A) Environmental, Social and Governance</label>
+                <label id="q1B"><input type="radio" name="q1" value="B"> B) Environmental, Social and Growth</label>
+                <label id="q1C"><input type="radio" name="q1" value="C"> C) Energy, Sustainability and Green</label>
             </fieldset>
 
             <fieldset id="q2">
                 <legend>2. Uma prática que contribui diretamente para o consumo consciente é:</legend>
-                <label><input type="radio" name="q2" value="A"> A) Comprar produtos em embalagens plásticas descartáveis</label>
-                <label><input type="radio" name="q2" value="B"> B) Escolher produtos duráveis e de empresas sustentáveis</label>
-                <label><input type="radio" name="q2" value="C"> C) Comprar o máximo possível para aproveitar promoções</label>
+                <label id="q2A"><input type="radio" name="q2" value="A"> A) Comprar produtos em embalagens plásticas descartáveis</label>
+                <label id="q2B"><input type="radio" name="q2" value="B"> B) Escolher produtos duráveis e de empresas sustentáveis</label>
+                <label id="q2C"><input type="radio" name="q2" value="C"> C) Comprar o máximo possível para aproveitar promoções</label>
             </fieldset>
 
             <fieldset id="q3">
                 <legend>3. Uma medida eficiente para prevenir enchentes nas cidades é:</legend>
-                <label><input type="radio" name="q3" value="A"> A) Ampliar áreas verdes e investir em sistemas de drenagem sustentável</label>
-                <label><input type="radio" name="q3" value="B"> B) Construir mais estacionamentos de asfalto</label>
-                <label><input type="radio" name="q3" value="C"> C) Limpar os rios apenas uma vez por ano</label>
+                <label id="q3A"><input type="radio" name="q3" value="A"> A) Ampliar áreas verdes e investir em sistemas de drenagem sustentável</label>
+                <label id="q3B"><input type="radio" name="q3" value="B"> B) Construir mais estacionamentos de asfalto</label>
+                <label id="q3C"><input type="radio" name="q3" value="C"> C) Limpar os rios apenas uma vez por ano</label>
             </fieldset>
 
             <fieldset id="q4">
                 <legend>4. Qual desses materiais leva mais tempo para se decompor na natureza?</legend>
-                <label><input type="radio" name="q4" value="A"> A) Plástico</label>
-                <label><input type="radio" name="q4" value="B"> B) Papel</label>
-                <label><input type="radio" name="q4" value="C"> C) Casca de fruta</label>
+                <label id="q4A"><input type="radio" name="q4" value="A"> A) Plástico</label>
+                <label id="q4B"><input type="radio" name="q4" value="B"> B) Papel</label>
+                <label id="q4C"><input type="radio" name="q4" value="C"> C) Casca de fruta</label>
             </fieldset>
 
             <fieldset id="q5">
                 <legend>5. Sobre o conceito de pegada de carbono, podemos afirmar que:</legend>
-                <label><input type="radio" name="q5" value="A"> A) É a quantidade de gases de efeito estufa emitidos direta ou indiretamente por uma pessoa, empresa ou evento.</label>
-                <label><input type="radio" name="q5" value="B"> B) É a quantidade de lixo que uma pessoa produz diariamente.</label>
-                <label><input type="radio" name="q5" value="C"> C) É a marca dos pneus no asfalto.</label>
+                <label id="q5A"><input type="radio" name="q5" value="A"> A) É a quantidade de gases de efeito estufa emitidos direta ou indiretamente por uma pessoa, empresa ou evento.</label>
+                <label id="q5B"><input type="radio" name="q5" value="B"> B) É a quantidade de lixo que uma pessoa produz diariamente.</label>
+                <label id="q5C"><input type="radio" name="q5" value="C"> C) É a marca dos pneus no asfalto.</label>
             </fieldset>
 
             <fieldset id="q6">
                 <legend>6. Qual dessas atitudes é mais sustentável no dia a dia?</legend>
-                <label><input type="radio" name="q6" value="A"> A) Reduzir o consumo, reutilizar produtos e reciclar corretamente.</label>
-                <label><input type="radio" name="q6" value="B"> B) Jogar lixo reciclável no lixo comum, pois vai ser separado depois.</label>
-                <label><input type="radio" name="q6" value="C"> C) Usar copos descartáveis todos os dias no trabalho.</label>
+                <label id="q6A"><input type="radio" name="q6" value="A"> A) Reduzir o consumo, reutilizar produtos e reciclar corretamente.</label>
+                <label id="q6B"><input type="radio" name="q6" value="B"> B) Jogar lixo reciclável no lixo comum, pois vai ser separado depois.</label>
+                <label id="q6C"><input type="radio" name="q6" value="C"> C) Usar copos descartáveis todos os dias no trabalho.</label>
             </fieldset>
 
             <fieldset id="q7">
                 <legend>7. Qual dessas ações está ligada à Governança dentro do ESG?</legend>
-                <label><input type="radio" name="q7" value="A"> A) Plantar árvores na empresa.</label>
-                <label><input type="radio" name="q7" value="B"> B) Transparência nos relatórios financeiros e combate à corrupção.</label>
-                <label><input type="radio" name="q7" value="C"> C) Instalar painéis solares.</label>
+                <label id="q7A"><input type="radio" name="q7" value="A"> A) Plantar árvores na empresa.</label>
+                <label id="q7B"><input type="radio" name="q7" value="B"> B) Transparência nos relatórios financeiros e combate à corrupção.</label>
+                <label id="q7C"><input type="radio" name="q7" value="C"> C) Instalar painéis solares.</label>
             </fieldset>
 
             <fieldset id="q8">
                 <legend>8. Sobre enchentes, qual alternativa é verdadeira?</legend>
-                <label><input type="radio" name="q8" value="A"> A) Descarte incorreto de lixo entope bueiros e agrava as enchentes.</label>
-                <label><input type="radio" name="q8" value="B"> B) As enchentes acontecem só por causa da chuva forte, sem relação com ações humanas.</label>
-                <label><input type="radio" name="q8" value="C"> C) Enchentes são boas, pois limpam as ruas da cidade.</label>
+                <label id="q8A"><input type="radio" name="q8" value="A"> A) Descarte incorreto de lixo entope bueiros e agrava as enchentes.</label>
+                <label id="q8B"><input type="radio" name="q8" value="B"> B) As enchentes acontecem só por causa da chuva forte, sem relação com ações humanas.</label>
+                <label id="q8C"><input type="radio" name="q8" value="C"> C) Enchentes são boas, pois limpam as ruas da cidade.</label>
             </fieldset>
 
             <fieldset id="q9">
                 <legend>9. Qual dessas práticas é exemplo de economia circular?</legend>
-                <label><input type="radio" name="q9" value="A"> A) Transformar resíduos em novos produtos, como plástico reciclado virar móveis.</label>
-                <label><input type="radio" name="q9" value="B"> B) Jogar fora produtos antigos para comprar novos mais modernos.</label>
-                <label><input type="radio" name="q9" value="C"> C) Comprar e descartar, acreditando que a reciclagem sempre resolverá.</label>
+                <label id="q9A"><input type="radio" name="q9" value="A"> A) Transformar resíduos em novos produtos, como plástico reciclado virar móveis.</label>
+                <label id="q9B"><input type="radio" name="q9" value="B"> B) Jogar fora produtos antigos para comprar novos mais modernos.</label>
+                <label id="q9C"><input type="radio" name="q9" value="C"> C) Comprar e descartar, acreditando que a reciclagem sempre resolverá.</label>
             </fieldset>
 
             <fieldset id="q10">
                 <legend>10. Uma empresa sustentável deve:</legend>
-                <label><input type="radio" name="q10" value="A"> A) Focar só no lucro, sem se preocupar com impactos.</label>
-                <label><input type="radio" name="q10" value="B"> B) Buscar equilíbrio entre resultados econômicos, sociais e ambientais.</label>
-                <label><input type="radio" name="q10" value="C"> C) Investir apenas em marketing verde, sem mudar seus processos.</label>
+                <label id="q10A"><input type="radio" name="q10" value="A"> A) Focar só no lucro, sem se preocupar com impactos.</label>
+                <label id="q10B"><input type="radio" name="q10" value="B"> B) Buscar equilíbrio entre resultados econômicos, sociais e ambientais.</label>
+                <label id="q10C"><input type="radio" name="q10" value="C"> C) Investir apenas em marketing verde, sem mudar seus processos.</label>
             </fieldset>
 
             <button id="btnEnviarQuiz">Enviar Respostas</button>
@@ -148,6 +148,8 @@
         </form>
 
         <hr>
+
+        <h2 id="textoResultado" class="textoResultado"></h2>
 
         <div>
             <h2>Pontuação:</h2>
