@@ -25,30 +25,51 @@ const textoResultado = document.getElementById("textoResultado")
 
 // CODIGO
 
-    // btnEnviarForm.addEventListener("click", function (event) {
+    btnEnviarForm.addEventListener("click", function (event) {
 
-    //     event.preventDefault()
-    //     let nome = inputNome.value
-    //     let email = inputEmail.value
-    //     let assunto = inputAssunto.value
-    //     let mensagem = inputMensagem.value
+        event.preventDefault()
+        let nome = inputNome.value
+        let email = inputEmail.value
+        let assunto = inputAssunto.value
+        let mensagem = inputMensagem.value
 
-    //     if (nome === '' || email === '' || mensagem === '') {
-    //         msgErro.textContent = "Preencha os campos vazios!"
-    //         msgErro.classList.add('msgVermelha') //<-- adicionar style definido no arquivo CSS ao texto
-    //         // msgErro.setAttribute("src","'link da imagem'") // <-- Alterar 'src' do elemento
-    //         // msgErro.src = "link"
-    //         if (nome === ''){
-    //             inputNome.style.backgroundColor()
-    //         }
-    //         return
-    //     }
+        if (nome === '' || email === '' || mensagem === '') {
+            msgErro.textContent = "Preencha os campos vazios!"
+            msgErro.classList.add('msgVermelha') //<-- adicionar style definido no arquivo CSS ao texto
+            // msgErro.setAttribute("src","'link da imagem'") // <-- Alterar 'src' do elemento
+            // msgErro.src = "link"
+            if (nome === ''){
+                inputNome.style.backgroundColor = "#f22727"
+            } else {
+                inputNome.style.backgroundColor = "var(--text-color)"
+            }
+            if (email === ''){
+                inputEmail.style.backgroundColor = "#f22727"
+            } else {
+                inputEmail.style.backgroundColor = "var(--text-color)"
+            }
+            if (mensagem === ''){
+                inputMensagem.style.backgroundColor = "#f22727"
+            } else {
+                inputMensagem.style.backgroundColor = "var(--text-color)"
+            }
+        
+            return
+        }
 
-    //     alert(`Nome: ${nome}\nE-mail: ${email}\nAssunto: ${assunto}\nMensagem: ${mensagem}`)
+        if (nome !== '' && email !=='' && mensagem !== '') {
+            inputNome.style.backgroundColor = "var(--text-color)"
+            inputEmail.style.backgroundColor = "var(--text-color)"
+            inputMensagem.style.backgroundColor = "var(--text-color)"
+
+            msgErro.textContent = ""
+        }
+
+        alert(`DEBUG ALERT!\nNome: ${nome}\nE-mail: ${email}\nAssunto: ${assunto}\nMensagem: ${mensagem}`)
 
 
 
-    // })
+    })
 
     btnEnviarQuiz.addEventListener("click", function (quiz) {
 
