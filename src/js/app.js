@@ -38,8 +38,35 @@ const textoResultado = document.getElementById("textoResultado")
     
 
 
-    btnEnviarForm.addEventListener("click", function (event) {
+    // Menu Hamburger 
+    function toggleMenu() {
+        const sidebar = document.getElementById("menu");
+        if (sidebar.style.width === "250px") {
+            sidebar.style.width = "0";
+            sidebar.style.borderLeftStyle = "none";
+        } else {
+            sidebar.style.width = "250px";
+            sidebar.style.borderLeftStyle = "solid";
+        }
+    }
 
+    // Mudar Tema
+
+    function togglePadrao(){
+        document.body.classList.remove('dark','inverso')
+        document.body.classList.add('padrao')
+    }
+    function toggleInverso(){
+        document.body.classList.remove('padrao','dark')
+        document.body.classList.add('inverso')
+    }
+    function toggleDark(){
+        document.body.classList.remove('padrao','inverso')
+        document.body.classList.add('dark')
+    }
+
+    // Enviar Form
+    btnEnviarForm.addEventListener("click", function (event) {
         if (nome === '' || email === '' || mensagem === '') {
             msgErro.textContent = "Preencha os campos vazios!"
             msgErro.classList.add('msgVermelha') //<-- adicionar style definido no arquivo CSS ao texto
@@ -62,7 +89,7 @@ const textoResultado = document.getElementById("textoResultado")
             }
         
             return
-        }
+    }
 
         if (nome !== '' && email !=='' && mensagem !== '') {
             inputNome.style.backgroundColor = "var(--text-color)"

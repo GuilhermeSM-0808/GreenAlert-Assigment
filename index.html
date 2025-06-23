@@ -20,11 +20,23 @@
 
         <nav>
             <ul>
-                <li><a href="">Menu</a></li>
+                <li><a class="menu" onclick="toggleMenu()">Menu</a></li>
             </ul>
         </nav>
 
     </header>
+
+    <section>
+        <div id="menu" class="sidebar">
+            <a class="menu" onclick="toggleMenu()"><h1>X</h1></a>
+            <a href="#presentation" onclick="toggleMenu()">Home</a>
+            <a href="#formSection" onclick="toggleMenu()">Fale Conosco</a>
+            <a href="#quiz" onclick="toggleMenu()">Quiz</a>
+            <a onclick="togglePadrao(), toggleMenu()">Tema Padrão</a>
+            <a onclick="toggleInverso(), toggleMenu()">Tema Inverso</a>
+            <a onclick="toggleDark(), toggleMenu()">Tema Dark</a>
+        </div>
+    </section>
 
     <section id="presentation" class="presentation">
         <div id="img1" class="slide">
