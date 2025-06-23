@@ -1,29 +1,16 @@
 // REF ---> https://cherry-client-b8f.notion.site/Manipula-o-de-DOM-11b911d84e0d8074b3c9f88be820405b 
 
-
-
 // Variaveis FORM
-    const form = document.getElementById("form")
-    const inputNome = document.getElementById("nome")
-    const inputEmail = document.getElementById("email")
-    const inputAssunto = document.getElementById("tipo")
-    const inputMensagem = document.getElementById("mensagem")
-    const btnEnviarForm = document.getElementById("btnEnviarForm")
-    const msgErro = document.getElementById("msgErro")
-    const cadastro = document.getElementById("cadastros")
-// Variaveis Slides
-    let slideIndex = 0;
-    const slides = document.getElementsByClassName("slide");
+const form = document.getElementById("form")
+const inputNome = document.getElementById("nome")
+const inputEmail = document.getElementById("email")
+const inputAssunto = document.getElementById("tipo")
+const inputMensagem = document.getElementById("mensagem")
+const btnEnviarForm = document.getElementById("btnEnviarForm")
+const msgErro = document.getElementById("msgErro")
+const cadastro = document.getElementById("cadastros")
 
-// // Variaveis FORM
-//     const form = document.getElementById("form")
-//     const inputNome = document.getElementById("nome")
-//     const inputEmail = document.getElementById("email")
-//     const inputAssunto = document.getElementById("tipo")
-//     const inputMensagem = document.getElementById("mensagem")
-//     const btnEnviarForm = document.getElementById("btnEnviarForm")
-//     const msgErro = document.getElementById("msgErro")
-//     const cadastro = document.getElementById("cadastros")
+// Variaveis Quiz
 
 const gabarito = {q1:"A", q2:"B", q3:"A", q4:"A", q5:"A", q6:"A", q7:"B", q8:"A", q9:"A", q10:"B"};
 const quiz = document.getElementById("quizForm")
@@ -32,12 +19,14 @@ const notaDisplay = document.getElementById("nota")
 const msgErroQuiz = document.getElementById("msgErroQuiz")
 const textoResultado = document.getElementById("textoResultado")
 
+// Variaveis Slides
+let slideIndex = 0;
+const slides = document.getElementsByClassName("slide");
+
 
 
 // CODIGO
     
-
-
     // Menu Hamburger 
     function toggleMenu() {
         const sidebar = document.getElementById("menu");
@@ -65,8 +54,16 @@ const textoResultado = document.getElementById("textoResultado")
         document.body.classList.add('dark')
     }
 
-    // Enviar Form
+
+    // Enviar form 
     btnEnviarForm.addEventListener("click", function (event) {
+
+        event.preventDefault()
+        let nome = inputNome.value
+        let email = inputEmail.value
+        let assunto = inputAssunto.value
+        let mensagem = inputMensagem.value
+
         if (nome === '' || email === '' || mensagem === '') {
             msgErro.textContent = "Preencha os campos vazios!"
             msgErro.classList.add('msgVermelha') //<-- adicionar style definido no arquivo CSS ao texto
@@ -75,36 +72,37 @@ const textoResultado = document.getElementById("textoResultado")
             if (nome === ''){
                 inputNome.style.backgroundColor = "#f22727"
             } else {
-                inputNome.style.backgroundColor = "var(--text-color)"
+                inputNome.style.backgroundColor = "var(--text1-color)"
             }
             if (email === ''){
                 inputEmail.style.backgroundColor = "#f22727"
             } else {
-                inputEmail.style.backgroundColor = "var(--text-color)"
+                inputEmail.style.backgroundColor = "var(--text1-color)"
             }
             if (mensagem === ''){
                 inputMensagem.style.backgroundColor = "#f22727"
             } else {
-                inputMensagem.style.backgroundColor = "var(--text-color)"
+                inputMensagem.style.backgroundColor = "var(--text1-color)"
             }
         
             return
-    }
+        }
 
         if (nome !== '' && email !=='' && mensagem !== '') {
-            inputNome.style.backgroundColor = "var(--text-color)"
-            inputEmail.style.backgroundColor = "var(--text-color)"
-            inputMensagem.style.backgroundColor = "var(--text-color)"
+            inputNome.style.backgroundColor = "var(--text1-color)"
+            inputEmail.style.backgroundColor = "var(--text1-color)"
+            inputMensagem.style.backgroundColor = "var(--text1-color)"
 
             msgErro.textContent = ""
         }
 
-        alert(`DEBUG ALERT!\nNome: ${nome}\nE-mail: ${email}\nAssunto: ${assunto}\nMensagem: ${mensagem}`)
+        alert(`DEBUG ALERT!\nNome: ${nome}\nE-mail: ${email}\nAssunto: ${assunto}\nMensagem: ${mensagem}`);
+        // window.location.reload();
+        form.reset();
 
-
-
-    });
-
+        
+    })
+    // Quiz 
     btnEnviarQuiz.addEventListener("click", function (quiz) {
 
         let nota = 0;
@@ -176,7 +174,9 @@ const textoResultado = document.getElementById("textoResultado")
         slides[i].style.display = "none";
       }
       slideIndex++;
-      if (slideIndex > slides.length) {slideIndex = 1}
+      if (slideIndex > slides.length) {
+        slideIndex = 1;
+      }
       slides[slideIndex-1].style.display = "block";
       setTimeout(showSlides, 6000);
     }
