@@ -153,7 +153,7 @@ const slides = document.getElementsByClassName("slide");
 
         if (nota > 5) {
             textoResultado.textContent = "Muito bem!";
-            textoResultado.style.color = "var(--text-color)";
+            textoResultado.style.color = "var(--text1-color)";
             textoResultado.style.backgroundColor = "var(--base1-color)";
         } else{
             textoResultado.textContent = "Estude mais!";
